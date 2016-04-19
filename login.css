@@ -1,8 +1,15 @@
+:root {
+	--main-bg-color: rgba(255, 255, 219, 1);
+	--dark-blue: rgba(0, 0, 38, 1);
+	--main-accent: rgba(148, 93, 161, 1);
+	--main-yellow: rgba(255, 247, 123, 1);
+}
+
 body {
 	font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: #333;
-	background-color: #E9E9E9; /* New design */
+	background-color: var(--main-bg-color);
 	margin: 0;
 }
 label {
@@ -16,9 +23,18 @@ label {
 	padding: 25px;
 	background-color: rgba(250,250,250,0.5);
 	border-radius: 5px;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2), 
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2),
     			inset 0px 1px 0px 0px rgba(250, 250, 250, 0.5);
     border: 1px solid rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 350px) {
+  #login-form {
+		background-color: none;
+		border: none;
+		box-shadow: none;
+		width: 100%;
+		max-width: 350px;
+	}
 }
 #login-form input[type=password],
 #login-form input[type=text] {
@@ -26,7 +42,7 @@ label {
 	padding: 5px;
 	border: 1px solid rgba(0, 0, 0, 0.3);
 	border-radius: 3px;
-	box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 
+	box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
 				0px 1px 0px 0px rgba(250, 250, 250, 0.5) ;
 }
 #login-form input[type=submit] {
